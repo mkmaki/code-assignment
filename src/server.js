@@ -1,5 +1,5 @@
 const fs = require("fs")
-const packageList = require('./readPackages')
+const packageList = require('./lib/readPackages')
 const cors = require('cors')
 const express = require('express')
 const app = express()

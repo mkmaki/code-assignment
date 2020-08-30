@@ -1,0 +1,13 @@
+#title {
+    background-color: #eee;
+    width: 800px;
+    margin-bottom: 1em;
+}
+#content {
+    width: 800px;
+    height: 800px;
+    overflow: auto;
+    background-color: #eee;
+    margin-bottom: 1em;
+    margin-right: 10px;
+  }

@@ -1,3 +1,4 @@
+const URL = 'http://localhost:8080'
 showPackageListener = (e) => { 
     if(e.target.className) 
         showPackage(e.target.className)
@@ -15,7 +16,7 @@ async function fetchData(endpoint) {
 async function showPackageList() {
     title.innerText = 'Software package list:'
     content.innerHTML = ''
-    const data = await fetchData('http://localhost:3001/packages')
+    const data = await fetchData(URL + '/packages')
     for (let package of data) {
         let dt = document.createElement('dt')
         dt.className = package['Package']
@@ -27,7 +28,7 @@ async function showPackageList() {
 
 async function showPackage(package) {
     title.innerText = 'Details for the package:'
-    const data = await fetchData('http://127.0.0.1:3001/packages/' + package)
+    const data = await fetchData(URL + '/packages/' + package)
     if(data['Package'] === undefined) return
     
     content.innerHTML = ''

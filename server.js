@@ -9,6 +9,7 @@ app.use(express.static('public'))
 app.get('/packages/:name', handlers.getPackage)
 app.get('/packages', handlers.getAllPackages)
 
+app.use((req, res) => res.sendStatus(404))
 app.listen(8080)
 
 
